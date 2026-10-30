@@ -17,7 +17,33 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.blueAccent,
         ),
-        body: Center(child: Text('Bienvenue dans cet atelier!')),
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Text(
+                'Bienvenue dans mon atelier de Flutter !',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                ),
+              ),
+              SizedBox(height: 20),
+              Image.network(
+                'https://hips.hearstapps.com/goodhousekeeping/assets/17/30/bernese-mountain-dog.jpg',
+                width: 200,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Découvrez une interface simple, claire et élégante.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
